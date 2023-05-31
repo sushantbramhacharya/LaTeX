@@ -1,0 +1,57 @@
+\documentclass[titlepage]{article}
+% preamble 
+% title page for title page in non ones
+% max 10- 12pt
+\usepackage{graphicx} % Required for inserting images
+\usepackage{lipsum}
+\usepackage{lscape} % use lscape for landscape page format
+
+\title{latex}
+\author{Latex Training}
+\date{\today}
+\pagenumbering{Roman}
+% alph for alphabet numbering 
+% use capital front letter for capital numbering
+% roman for roman numbering
+\begin{document}
+
+\maketitle
+% To show info in output 
+% Back slash is needed for special characters like %
+\tableofcontents
+\newpage
+\pagestyle{empty}
+
+\section[Intro]{Introduction}%use [] for change in table in contents
+% Use * for remove number and can be used in sub and subsub sections
+
+Hello World\\
+% Paragraph change caused by empty line
+% Line break using \\
+Hello\\
+\lipsum[1]
+\newpage
+\begin{landscape}% for specific page landscaping
+\section{Background}
+\lipsum[1]
+\end{landscape}
+\subsection{Objectives}
+\lipsum[2]
+\subsubsection{General Objectives}
+To learn Basic about \LaTeX
+\subsubsection{Specific Objectives}
+
+\begin{itemize}%environment for listing items.
+\item To learn Basic about \LaTeX 
+\item To learn Tables and figures 
+\item To learn Referencing and co referencing \LaTeX \\ 
+\end{itemize}
+\begin{enumerate}
+%enumerate to display number values
+\item To learn Basic about \LaTeX 
+\item To learn Tables and figures 
+\item To learn Referencing and co referencing \LaTeX 
+\end{enumerate}
+
+% [] contains which paragraph to display like 1, 2, 1-2 goes on
+\end{document}
