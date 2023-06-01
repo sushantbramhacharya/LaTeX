@@ -1,0 +1,101 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{lipsum}
+\usepackage[a4paper, inner=1.5in,outer=1.5in,top=1in,bottom=1in]{geometry}%with optional commands
+%if both side printing user inner and outer otherwise use left or right for normal single page printing
+\usepackage[onehalfspacing]{setspace}%line spacing 1 and 1/2=one half spacing 2=double spacing 
+\title{Day2}
+\author{LaTeX}
+\date{June 2023}
+
+\begin{document}
+
+\maketitle
+\listoffigures
+\newpage
+\section{Introduction}
+\begin{verbatim}
+    \documentclass{optional}{arguements}
+    %it wont use classes instead it displays it
+\end{verbatim}
+\begin{enumerate}
+    \item \textbf{bold}
+    \begin{verbatim}
+    \textbf{}
+    \end{verbatim}
+    \item \textit{italic}
+    \begin{verbatim}
+    \textit{}
+    \end{verbatim}
+    \item \underline{underline}
+    \begin{verbatim}
+    \underline{}
+    \end{verbatim}
+\end{enumerate}
+\newpage
+\section{Text Alignment}
+\begin{center}
+The text get aligned in center
+\begin{verbatim}
+    \begin{center}.....\end{center}
+\end{verbatim}
+\end{center}
+\begin{flushleft}
+The text get aligned in left
+\begin{verbatim}
+    \begin{flushleft}.....\end{flushleft}
+\end{verbatim}
+\end{flushleft}
+\begin{flushright}
+The text get aligned in right
+\begin{verbatim}
+    \begin{flushright}.....\end{flushright}
+\end{verbatim}
+\end{flushright}
+\newpage
+\section{Regarding quotation}
+\begin{quote}
+    \lipsum[1]
+    %especially quore paragraph
+\end{quote}
+\lipsum[1-2]
+
+\noindent\lipsum[3]%To remove indentation
+\newpage
+\section{Inserting Figure}
+\begin{figure}[h]
+%h for text formatting with pics h=here t=top
+    \centering
+    \includegraphics[width=5in]{python.jpg}
+    \caption{Logo of Python}
+\end{figure}
+\newpage
+\section{Defining Margins}
+\begin{verbatim}
+\usepackage[a4paper, inner=1.5in,outer=1.5in,top=1in,bottom=1in]{geometry}
+%with optional commands
+%if both side printing user inner and outer otherwise 
+use left or right for normal single page printing
+\end{verbatim}
+\section{Inserting Tables}
+\begin{itemize}
+    \item Two Two are \dotfill Four
+    \item Three Three are \dotfill Nine
+    \item Three Three are \hspace{1.5in} Nine
+    \item Three Three are \hrulefill Nine
+    \item Three Three are  Nine\hrule%for underlining
+\end{itemize}
+\begin{table}[h]
+    \centering
+    \caption{Languages and their Popularity}
+    \vspace{0.25in}% Gives Vertical Spaces
+    \begin{tabular}{|c|l|l|}%c|c says center align first column and like wise go on.| seperates with vertical line
+    \hline S.N & Name & Popularity \\
+    \hline 01 & Java & Very Popular\\
+    \hline 02 & C & Moderately Popular\\
+    \hline 03 & Pascal & Not Popular\\
+    \hline 04 & Python & Very Very Popular\\
+    \hline
+    \end{tabular}
+\end{table}
+\end{document}
